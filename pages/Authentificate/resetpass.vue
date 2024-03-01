@@ -1,0 +1,4 @@
+<template>
+    <BaseAuthHeading />
+    <AuthentificateResetContent />
+</template>

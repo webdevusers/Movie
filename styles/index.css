@@ -1,0 +1,29 @@
+/* Heading text styles */
+.h1 {
+  @apply xl:font-bold md:font-semibold font-medium text-[64px]
+}
+.h2 {
+  @apply xl:font-bold md:font-semibold font-medium text-[56px]
+}
+.h3 {
+  @apply xl:font-bold md:font-semibold font-medium text-[48px]
+}
+.h4 {
+  @apply xl:font-bold md:font-semibold font-medium text-[40px]
+}
+.h5 {
+  @apply xl:font-bold md:font-semibold font-medium text-[32px]
+}
+.h6 {
+  @apply xl:font-bold md:font-semibold font-medium text-[24px]
+}
+/* Fonts */
+.medium {
+  @apply font-medium
+}
+.bold {
+  @apply font-bold
+}
+.semibold {
+  @apply font-semibold
+}
