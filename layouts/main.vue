@@ -1,7 +1,7 @@
 <template>
   <NuxtLoadingIndicator />
   <BaseMainHead />
-  <div class="container grid grid-cols-5">
+  <div class=" grid grid-cols-5 w-full">
     <div class="col-span-1">
       <BaseSidebar />
     </div>
