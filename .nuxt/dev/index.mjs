@@ -3,29 +3,29 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/h3/dist/index.mjs';
-import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { stringify, uneval } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/devalue/index.js';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/vue/server-renderer/index.mjs';
-import { renderSSRHead } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/@unhead/ssr/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/ofetch/dist/node.mjs';
-import destr from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/destr/dist/index.mjs';
-import { createCall, createFetch } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/hookable/dist/index.mjs';
-import { klona } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/klona/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/scule/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/defu/dist/defu.mjs';
-import { hash } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/ohash/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file://D:/my%20kods/Movie/node_modules/h3/dist/index.mjs';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://D:/my%20kods/Movie/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file://D:/my%20kods/Movie/node_modules/devalue/index.js';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery } from 'file://D:/my%20kods/Movie/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://D:/my%20kods/Movie/node_modules/vue/server-renderer/index.mjs';
+import { renderSSRHead } from 'file://D:/my%20kods/Movie/node_modules/@unhead/ssr/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://D:/my%20kods/Movie/node_modules/ofetch/dist/node.mjs';
+import destr from 'file://D:/my%20kods/Movie/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file://D:/my%20kods/Movie/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://D:/my%20kods/Movie/node_modules/hookable/dist/index.mjs';
+import { klona } from 'file://D:/my%20kods/Movie/node_modules/klona/dist/index.mjs';
+import { snakeCase } from 'file://D:/my%20kods/Movie/node_modules/scule/dist/index.mjs';
+import defu, { defuFn } from 'file://D:/my%20kods/Movie/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file://D:/my%20kods/Movie/node_modules/ohash/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://D:/my%20kods/Movie/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://D:/my%20kods/Movie/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://D:/my%20kods/Movie/node_modules/radix3/dist/index.mjs';
 import { fileURLToPath } from 'node:url';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/ipx/dist/index.mjs';
-import { isAbsolute } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/pathe/dist/index.mjs';
-import { version, unref } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/vue/index.mjs';
-import { createServerHead as createServerHead$1 } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/@unhead/shared/dist/index.mjs';
+import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://D:/my%20kods/Movie/node_modules/ipx/dist/index.mjs';
+import { isAbsolute } from 'file://D:/my%20kods/Movie/node_modules/pathe/dist/index.mjs';
+import { version, unref } from 'file://D:/my%20kods/Movie/node_modules/vue/index.mjs';
+import { createServerHead as createServerHead$1 } from 'file://D:/my%20kods/Movie/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin } from 'file://D:/my%20kods/Movie/node_modules/@unhead/shared/dist/index.mjs';
 
 const r=Object.create(null),E=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return E()[o]??r[o]},has(e,o){const i=E();return o in i||o in r},set(e,o,i){const g=E(!0);return g[o]=i,!0},deleteProperty(e,o){if(!o)return !1;const i=E(!0);return delete i[o],!0},ownKeys(){const e=E(!0);return Object.keys(e)}}),t=typeof process<"u"&&process.env&&"development"||"",p=[["APPVEYOR"],["AWS_AMPLIFY","AWS_APP_ID",{ci:!0}],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"],["ZEABUR"],["CODESPHERE","CODESPHERE_APP_ID",{ci:!0}],["RAILWAY","RAILWAY_PROJECT_ID"],["RAILWAY","RAILWAY_SERVICE_ID"]];function B(){if(globalThis.process?.env)for(const e of p){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const l=B(),d=l.name;function n(e){return e?e!=="false":!1}const I=globalThis.process?.platform||"",T=n(s.CI)||l.ci!==!1,R=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const C=t==="test"||n(s.TEST);n(s.MINIMAL)||T||C||!R;const a=/^win/i.test(I);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||(R||a)&&s.TERM!=="dumb"||T);const _=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(_?.split(".")[0])||null;const W=globalThis.process||Object.create(null),c={versions:{}};new Proxy(W,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in c)return c[o]}});const A=globalThis.process?.release?.name==="node",L=!!globalThis.Bun||!!globalThis.process?.versions?.bun,D=!!globalThis.Deno,O=!!globalThis.fastly,S=!!globalThis.Netlify,N=!!globalThis.EdgeRuntime,u=globalThis.navigator?.userAgent==="Cloudflare-Workers",b=!!globalThis.__lagon__,F=[[S,"netlify"],[N,"edge-light"],[u,"workerd"],[O,"fastly"],[D,"deno"],[L,"bun"],[A,"node"],[b,"lagon"]];function G(){const e=F.find(o=>o[0]);if(e)return {name:e[1]}}const P=G();P?.name||"";
 
@@ -215,7 +215,7 @@ const _inlineRuntimeConfig = {
     "alias": {},
     "fs": {
       "dir": [
-        "C:/Users/webde/OneDrive/Pulpit/Movie/public"
+        "D:/my kods/Movie/public"
       ]
     },
     "http": {
@@ -267,7 +267,7 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
   }
 });
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/webde/OneDrive/Pulpit/Movie/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"D:/my kods/Movie/server/assets"}];
 
 const assets = createStorage();
 
@@ -279,11 +279,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\webde\\OneDrive\\Pulpit\\Movie","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\webde\\OneDrive\\Pulpit\\Movie\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\webde\\OneDrive\\Pulpit\\Movie\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\webde\\OneDrive\\Pulpit\\Movie\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\webde\\OneDrive\\Pulpit\\Movie\\.data\\kv","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:\\my kods\\Movie","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:\\my kods\\Movie\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:\\my kods\\Movie\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:\\my kods\\Movie\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"D:\\my kods\\Movie\\.data\\kv","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -730,7 +730,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _ogH9Pky1ip = (function(nitro) {
+const _8ujPk1Ger8 = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script$1}<\/script>`);
   });
@@ -738,15 +738,15 @@ const _ogH9Pky1ip = (function(nitro) {
 
 const script = "\"use strict\";(()=>{const a=window,e=document.documentElement,m=[\"dark\",\"light\"],c=window&&window.localStorage&&window.localStorage.getItem&&window.localStorage.getItem(\"nuxt-color-mode\")||\"system\";let n=c===\"system\"?d():c;const l=e.getAttribute(\"data-color-mode-forced\");l&&(n=l),i(n),a[\"__NUXT_COLOR_MODE__\"]={preference:c,value:n,getColorScheme:d,addColorScheme:i,removeColorScheme:f};function i(o){const t=\"\"+o+\"\",s=\"\";e.classList?e.classList.add(t):e.className+=\" \"+t,s&&e.setAttribute(\"data-\"+s,o)}function f(o){const t=\"\"+o+\"\",s=\"\";e.classList?e.classList.remove(t):e.className=e.className.replace(new RegExp(t,\"g\"),\"\"),s&&e.removeAttribute(\"data-\"+s)}function r(o){return a.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function d(){if(a.matchMedia&&r(\"\").media!==\"not all\"){for(const o of m)if(r(\":\"+o).matches)return o}return\"light\"}})();\n";
 
-const _56NaUf4Mzn = (function(nitro) {
+const _H7hs0dqbMZ = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
 const plugins = [
-  _ogH9Pky1ip,
-_56NaUf4Mzn
+  _8ujPk1Ger8,
+_H7hs0dqbMZ
 ];
 
 const scheduledTasks = false;
@@ -888,7 +888,7 @@ function publicAssetsURL(...path) {
   return path.length ? joinURL(publicBase, ...path) : publicBase;
 }
 
-const _kdxKy5 = lazyEventHandler(() => {
+const _m3oNEg = lazyEventHandler(() => {
   const opts = useRuntimeConfig().ipx || {};
   const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
   const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
@@ -906,12 +906,12 @@ const _kdxKy5 = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
-const _lazy_Hpd2TB = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_372T6E = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_Hpd2TB, lazy: true, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _kdxKy5, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_Hpd2TB, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_372T6E, lazy: true, middleware: false, method: undefined },
+  { route: '/_ipx/**', handler: _m3oNEg, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_372T6E, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1185,8 +1185,8 @@ const appRootTag = "div";
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file://C:/Users/webde/OneDrive/Pulpit/Movie/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('file://C:/Users/webde/OneDrive/Pulpit/Movie/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://D:/my%20kods/Movie/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://D:/my%20kods/Movie/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {

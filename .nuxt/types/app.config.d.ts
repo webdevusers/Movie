@@ -1,7 +1,7 @@
 
 import type { CustomAppConfig } from 'nuxt/schema'
 import type { Defu } from 'defu'
-import cfg0 from "C:/Users/webde/OneDrive/Pulpit/Movie/app.config"
+import cfg0 from "D:/my kods/Movie/app.config"
 
 declare const inlineConfig = {
   "nuxt": {
