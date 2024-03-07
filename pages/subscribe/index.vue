@@ -47,8 +47,8 @@
           class="plan w-[374px] h-[518px] bg-redOrange-500 text-grayscale1-50 border athensGray-100 rounded-3xl mx-[32px]"
           id="free-trial">
           <div class="plan__inner p-[40px]">
-            <h3 class="text-[20px] font-semibold">Yearly Subscription</h3>
-            <p class="price text-[40px] font-semibold">$49.99<span class="text-[16px] text-grayscale6-500 ">/Month</span>
+            <h3 class="text-[20px] font-semibold">Monthly Subscription</h3>
+            <p class="price text-[40px] font-semibold">$4.99<span class="text-[16px] text-grayscale6-500 ">/Month</span>
             </p>
             <div class="lane w-[100%] h-[1px] bg-athensGray-100 my-[32px]"></div>
             <ul class="features font-semibold">
