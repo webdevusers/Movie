@@ -3,7 +3,7 @@
 // App Config
 import type { Defu } from 'defu'
 
-import type { default as appConfig0 } from "D:/my kods/Movie/app.config";
+import type { default as appConfig0 } from "C:/Users/webde/OneDrive/Pulpit/Movie/app.config";
 
 type UserAppConfig = Defu<{}, [typeof appConfig0]>
 
