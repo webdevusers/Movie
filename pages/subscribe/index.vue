@@ -38,6 +38,7 @@
             <p class="price text-[40px] font-semibold">$0<span class="text-[16px] text-grayscale6-500 ">/Month</span></p>
             <div class="lane w-[100%] h-[1px] bg-athensGray-100 my-[32px]"></div>
             <ul class="features font-semibold">
+<<<<<<< HEAD
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Streaming in high quality</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
@@ -47,6 +48,17 @@
               <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Ad-free viewing experience</li>
               <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
+=======
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Streaming in high quality</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                With the best audio quality</li>
+              <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Stream on multiple devices</li>
+              <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Ad-free viewing experience</li>
+              <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+>>>>>>> 5077df5f94f80f3909abd3e710fe165b13349243
                 Download to watch later</li>
             </ul>
 
@@ -61,11 +73,12 @@
           class="plan w-[374px] h-[518px] bg-redOrange-500 text-grayscale1-50 border athensGray-100 rounded-3xl mx-[32px]"
           id="free-trial">
           <div class="plan__inner p-[40px]">
-            <h3 class="text-[20px] font-semibold">Yearly Subscription</h3>
-            <p class="price text-[40px] font-semibold">$49.99<span class="text-[16px] text-grayscale6-500 ">/Month</span>
+            <h3 class="text-[20px] font-semibold">Monthly Subscription</h3>
+            <p class="price text-[40px] font-semibold">$4.99<span class="text-[16px] text-grayscale6-500 ">/Month</span>
             </p>
             <div class="lane w-[100%] h-[1px] bg-athensGray-100 my-[32px]"></div>
             <ul class="features font-semibold">
+<<<<<<< HEAD
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
                 Streaming in high quality</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
@@ -75,6 +88,17 @@
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
                 Ad-free viewing experience</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
+=======
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Streaming in high quality</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                With the best audio quality</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Stream on multiple devices</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Ad-free viewing experience</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+>>>>>>> 5077df5f94f80f3909abd3e710fe165b13349243
                 Download to watch later</li>
             </ul>
 
@@ -92,6 +116,7 @@
             </p>
             <div class="lane w-[100%] h-[1px] bg-athensGray-100 my-[32px]"></div>
             <ul class="features font-semibold">
+<<<<<<< HEAD
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Streaming in high quality</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
@@ -101,6 +126,17 @@
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Ad-free viewing experience</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
+=======
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Streaming in high quality</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                With the best audio quality</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Stream on multiple devices</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+                Ad-free viewing experience</li>
+              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
+>>>>>>> 5077df5f94f80f3909abd3e710fe165b13349243
                 Download to watch later</li>
             </ul>
 
