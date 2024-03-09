@@ -12,7 +12,10 @@ declare module 'vue' {
     'BaseSidebar': typeof import("../components/base/sidebar.vue")['default']
     'HomeMainContent': typeof import("../components/home/mainContent.vue")['default']
     'HomeRightContent': typeof import("../components/home/rightContent.vue")['default']
+<<<<<<< HEAD
     'UiCommingSoon': typeof import("../components/ui/comming-soon.vue")['default']
+=======
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
     'UiContinueWatching': typeof import("../components/ui/continueWatching.vue")['default']
     'UiCooperation': typeof import("../components/ui/cooperation.vue")['default']
     'UiSwiper': typeof import("../components/ui/swiper.vue")['default']
@@ -101,7 +104,10 @@ declare module 'vue' {
     'LazyBaseSidebar': typeof import("../components/base/sidebar.vue")['default']
     'LazyHomeMainContent': typeof import("../components/home/mainContent.vue")['default']
     'LazyHomeRightContent': typeof import("../components/home/rightContent.vue")['default']
+<<<<<<< HEAD
     'LazyUiCommingSoon': typeof import("../components/ui/comming-soon.vue")['default']
+=======
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
     'LazyUiContinueWatching': typeof import("../components/ui/continueWatching.vue")['default']
     'LazyUiCooperation': typeof import("../components/ui/cooperation.vue")['default']
     'LazyUiSwiper': typeof import("../components/ui/swiper.vue")['default']
@@ -193,7 +199,10 @@ export const BaseMainHead: typeof import("../components/base/mainHead.vue")['def
 export const BaseSidebar: typeof import("../components/base/sidebar.vue")['default']
 export const HomeMainContent: typeof import("../components/home/mainContent.vue")['default']
 export const HomeRightContent: typeof import("../components/home/rightContent.vue")['default']
+<<<<<<< HEAD
 export const UiCommingSoon: typeof import("../components/ui/comming-soon.vue")['default']
+=======
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
 export const UiContinueWatching: typeof import("../components/ui/continueWatching.vue")['default']
 export const UiCooperation: typeof import("../components/ui/cooperation.vue")['default']
 export const UiSwiper: typeof import("../components/ui/swiper.vue")['default']
@@ -282,7 +291,10 @@ export const LazyBaseMainHead: typeof import("../components/base/mainHead.vue")[
 export const LazyBaseSidebar: typeof import("../components/base/sidebar.vue")['default']
 export const LazyHomeMainContent: typeof import("../components/home/mainContent.vue")['default']
 export const LazyHomeRightContent: typeof import("../components/home/rightContent.vue")['default']
+<<<<<<< HEAD
 export const LazyUiCommingSoon: typeof import("../components/ui/comming-soon.vue")['default']
+=======
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
 export const LazyUiContinueWatching: typeof import("../components/ui/continueWatching.vue")['default']
 export const LazyUiCooperation: typeof import("../components/ui/cooperation.vue")['default']
 export const LazyUiSwiper: typeof import("../components/ui/swiper.vue")['default']

@@ -2,17 +2,25 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+import { useToastStore } from './toasts';
+
+const toast = useToastStore()
+
 export const useCurrentPage = () => {
   const selected: Ref<string> = ref('/');
   const router = useRouter();
 
-  const chooseCurrentPage = (name: string) => {
+  const chooseCurrentPage = (name: string, message:string) => {
     selected.value = name;
-    if (router) {
-      router.push(name);
-    } else {
-      console.error("Router is not defined");
-    }
+
+    toast.message.value = message;
+    toast.show.value = true;
+
+    router.push(name);
+
+    setTimeout(() => {
+      toast.show.value = false;
+    }, 2500);
   };
 
   return {

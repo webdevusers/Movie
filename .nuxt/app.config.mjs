@@ -56,6 +56,10 @@ if (import.meta.hot) {
   })
 }
 
+<<<<<<< HEAD
 import cfg0 from "C:/Users/User/Desktop/Projects/Movie/app.config.ts"
+=======
+import cfg0 from "C:/Users/webde/OneDrive/Pulpit/Movie/app.config.ts"
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
 
 export default /*@__PURE__*/ defuFn(cfg0, inlineConfig)

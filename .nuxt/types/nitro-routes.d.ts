@@ -3,6 +3,27 @@ import type { Serialize, Simplify } from 'nitropack'
 declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+<<<<<<< HEAD
+=======
+    '/api/authentificate/allusers': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/authentificate/allusers.get').default>>>>
+    }
+    '/api/authentificate/deleteUser': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/authentificate/deleteUser.post').default>>>>
+    }
+    '/api/authentificate/models/User.model': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/authentificate/models/User.model').default>>>>
+    }
+    '/api/authentificate/refresh': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/authentificate/refresh.post').default>>>>
+    }
+    '/api/authentificate/signin': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/authentificate/signin.post').default>>>>
+    }
+    '/api/authentificate/signup': {
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/authentificate/signup.post').default>>>>
+    }
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>
     }

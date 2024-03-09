@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "_hash": "CRUqGH8NOL",
   "project": {
     "rootDir": "C:/Users/User/Desktop/Projects/Movie"
+=======
+  "_hash": "rHEnffiIIO",
+  "project": {
+    "rootDir": "C:/Users/webde/OneDrive/Pulpit/Movie"
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
   },
   "versions": {
     "nuxt": "3.10.3"

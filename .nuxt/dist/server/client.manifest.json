@@ -7,12 +7,20 @@
     "module": true,
     "resourceType": "script"
   },
+<<<<<<< HEAD
   "C:/Users/User/Desktop/Projects/Movie/node_modules/nuxt/dist/app/entry.js": {
+=======
+  "C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/nuxt/dist/app/entry.js": {
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
+<<<<<<< HEAD
     "file": "C:/Users/User/Desktop/Projects/Movie/node_modules/nuxt/dist/app/entry.js"
+=======
+    "file": "C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/nuxt/dist/app/entry.js"
+>>>>>>> fdf309191c5aae59a3396292999b0c33a0672b92
   }
 }
