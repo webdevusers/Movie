@@ -4,5 +4,5 @@ definePageMeta({
 })
 </script>
 <template>
-  1234
+  <UiCommingSoon />
 </template>
