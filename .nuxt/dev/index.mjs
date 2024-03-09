@@ -4,6 +4,9 @@ import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
 import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/h3/dist/index.mjs';
+import jwt from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/jsonwebtoken/index.js';
+import bc from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/bcryptjs/index.js';
+import mongoose, { model, Schema } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/mongoose/index.js';
 import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { stringify, uneval } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/devalue/index.js';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery } from 'file://C:/Users/webde/OneDrive/Pulpit/Movie/node_modules/ufo/dist/index.mjs';
@@ -209,7 +212,9 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {},
-  "mongo_db": "",
+  "mongo_db": "mongodb+srv://kn9zbwkey:9dYjcoHKA077tW7D@moviedb.dmugnjc.mongodb.net/",
+  "jsonsecret_key": "3z56Ttep7ZX2sr5vYfYTv9h2L4V4VM4k",
+  "jsonrefresh_key": "m7d6u9A7CR3CVz95HsbT8Ph3dbAek4K6",
   "ipx": {
     "baseURL": "/_ipx",
     "alias": {},
@@ -661,9 +666,9 @@ function normalizeCookieHeaders(headers) {
   return outgoingHeaders;
 }
 
-const config = useRuntimeConfig();
+const config$1 = useRuntimeConfig();
 const _routeRulesMatcher = toRouteMatcher(
-  createRouter({ routes: config.nitro.routeRules })
+  createRouter({ routes: config$1.nitro.routeRules })
 );
 function createRouteRulesHandler(ctx) {
   return eventHandler((event) => {
@@ -736,19 +741,6 @@ const _ogH9Pky1ip = (function(nitro) {
   });
 });
 
-const script = "\"use strict\";(()=>{const a=window,e=document.documentElement,m=[\"dark\",\"light\"],c=window&&window.localStorage&&window.localStorage.getItem&&window.localStorage.getItem(\"nuxt-color-mode\")||\"system\";let n=c===\"system\"?d():c;const l=e.getAttribute(\"data-color-mode-forced\");l&&(n=l),i(n),a[\"__NUXT_COLOR_MODE__\"]={preference:c,value:n,getColorScheme:d,addColorScheme:i,removeColorScheme:f};function i(o){const t=\"\"+o+\"\",s=\"\";e.classList?e.classList.add(t):e.className+=\" \"+t,s&&e.setAttribute(\"data-\"+s,o)}function f(o){const t=\"\"+o+\"\",s=\"\";e.classList?e.classList.remove(t):e.className=e.className.replace(new RegExp(t,\"g\"),\"\"),s&&e.removeAttribute(\"data-\"+s)}function r(o){return a.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function d(){if(a.matchMedia&&r(\"\").media!==\"not all\"){for(const o of m)if(r(\":\"+o).matches)return o}return\"light\"}})();\n";
-
-const _56NaUf4Mzn = (function(nitro) {
-  nitro.hooks.hook("render:html", (htmlContext) => {
-    htmlContext.head.push(`<script>${script}<\/script>`);
-  });
-});
-
-const plugins = [
-  _ogH9Pky1ip,
-_56NaUf4Mzn
-];
-
 const scheduledTasks = false;
 
 const tasks = {
@@ -815,6 +807,50 @@ function defineRenderHandler(handler) {
     return response.body;
   });
 }
+
+const config = useRuntimeConfig();
+if (!config.mongo_db) {
+  throw new Error("No MongoDB connection string provided");
+}
+const ConnectToDataBase = async () => {
+  try {
+    await mongoose.connect(config.mongo_db).then(
+      () => {
+        console.log("Connected to MongoDB");
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+const _of2DdoPjlp = async (_nitroApp) => {
+  const start = async () => {
+    try {
+      await ConnectToDataBase();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  start();
+};
+
+const script = "\"use strict\";(()=>{const a=window,e=document.documentElement,m=[\"dark\",\"light\"],c=window&&window.localStorage&&window.localStorage.getItem&&window.localStorage.getItem(\"nuxt-color-mode\")||\"system\";let n=c===\"system\"?d():c;const l=e.getAttribute(\"data-color-mode-forced\");l&&(n=l),i(n),a[\"__NUXT_COLOR_MODE__\"]={preference:c,value:n,getColorScheme:d,addColorScheme:i,removeColorScheme:f};function i(o){const t=\"\"+o+\"\",s=\"\";e.classList?e.classList.add(t):e.className+=\" \"+t,s&&e.setAttribute(\"data-\"+s,o)}function f(o){const t=\"\"+o+\"\",s=\"\";e.classList?e.classList.remove(t):e.className=e.className.replace(new RegExp(t,\"g\"),\"\"),s&&e.removeAttribute(\"data-\"+s)}function r(o){return a.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function d(){if(a.matchMedia&&r(\"\").media!==\"not all\"){for(const o of m)if(r(\":\"+o).matches)return o}return\"light\"}})();\n";
+
+const _56NaUf4Mzn = (function(nitro) {
+  nitro.hooks.hook("render:html", (htmlContext) => {
+    htmlContext.head.push(`<script>${script}<\/script>`);
+  });
+});
+
+const plugins = [
+  _ogH9Pky1ip,
+_of2DdoPjlp,
+_56NaUf4Mzn
+];
 
 const errorHandler = (async function errorhandler(error, event) {
   const { stack, statusCode, statusMessage, message } = normalizeError(error);
@@ -906,9 +942,21 @@ const _kdxKy5 = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
+const _lazy_KP2S2g = () => Promise.resolve().then(function () { return allusers_get$1; });
+const _lazy_4H5byS = () => Promise.resolve().then(function () { return deleteUser_post$1; });
+const _lazy_CftA1E = () => Promise.resolve().then(function () { return User_model; });
+const _lazy_5FDIT2 = () => Promise.resolve().then(function () { return refresh_post$1; });
+const _lazy_K7o11x = () => Promise.resolve().then(function () { return signin_post$1; });
+const _lazy_qAxxpz = () => Promise.resolve().then(function () { return signup_post$1; });
 const _lazy_Hpd2TB = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
+  { route: '/api/authentificate/allusers', handler: _lazy_KP2S2g, lazy: true, middleware: false, method: "get" },
+  { route: '/api/authentificate/deleteUser', handler: _lazy_4H5byS, lazy: true, middleware: false, method: "post" },
+  { route: '/api/authentificate/models/User.model', handler: _lazy_CftA1E, lazy: true, middleware: false, method: undefined },
+  { route: '/api/authentificate/refresh', handler: _lazy_5FDIT2, lazy: true, middleware: false, method: "post" },
+  { route: '/api/authentificate/signin', handler: _lazy_K7o11x, lazy: true, middleware: false, method: "post" },
+  { route: '/api/authentificate/signup', handler: _lazy_qAxxpz, lazy: true, middleware: false, method: "post" },
   { route: '/__nuxt_error', handler: _lazy_Hpd2TB, lazy: true, middleware: false, method: undefined },
   { route: '/_ipx/**', handler: _kdxKy5, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_Hpd2TB, lazy: true, middleware: false, method: undefined }
@@ -1119,6 +1167,268 @@ const template$1 = _template;
 const errorDev = /*#__PURE__*/Object.freeze({
   __proto__: null,
   template: template$1
+});
+
+const UserSchema = new Schema({
+  username: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  phone: {
+    type: String,
+    required: false
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  avatar: {
+    type: String,
+    required: false,
+    default: "/icons/profile.png"
+  },
+  recentPlayed: {
+    type: Array,
+    default: []
+  },
+  download: {
+    type: Array,
+    default: []
+  },
+  watchList: {
+    type: Array,
+    default: []
+  }
+});
+const UserModel = model("User", UserSchema);
+
+const User_model = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: UserModel
+});
+
+const allusers_get = defineEventHandler(async (event) => {
+  try {
+    const users = await UserModel.find();
+    return {
+      data: {
+        status: "OK",
+        method: "Get all users allUsers.get.ts",
+        users
+      }
+    };
+  } catch (e) {
+    console.error(`status: Errormessage: ${e}`);
+    return {
+      data: {
+        status: "Error",
+        message: `${e}`
+      }
+    };
+  }
+});
+
+const allusers_get$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: allusers_get
+});
+
+const deleteUser_post = defineEventHandler(async (event) => {
+  try {
+    const { id } = await readBody(event);
+    if (!id.match(/^[0-9a-fA-F]{24}$/)) {
+      return {
+        data: {
+          status: "Error",
+          message: "Invalid user ID format"
+        }
+      };
+    }
+    const candidate = await UserModel.findById(id).exec();
+    if (!candidate) {
+      return {
+        data: {
+          status: "Error",
+          message: "User not found"
+        }
+      };
+    }
+    await UserModel.findByIdAndDelete(id).exec();
+    return {
+      data: {
+        status: "Success",
+        message: "User deleted successfully",
+        candidate
+      }
+    };
+  } catch (e) {
+    return {
+      data: {
+        status: "Error",
+        message: e
+      }
+    };
+  }
+});
+
+const deleteUser_post$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: deleteUser_post
+});
+
+const refresh_post = defineEventHandler(async (event) => {
+  try {
+    const { refreshToken } = await readBody(event);
+    if (!refreshToken) {
+      return {
+        data: {
+          status: "Error",
+          message: "Refresh token is required"
+        }
+      };
+    }
+    let userData;
+    try {
+      userData = jwt.verify(refreshToken, process.env.REFRESH_KEY);
+    } catch (err) {
+      return {
+        data: {
+          status: "Error",
+          message: "Invalid refresh token"
+        }
+      };
+    }
+    const user = await UserModel.findById(userData.userId).exec();
+    if (!user) {
+      return {
+        data: {
+          status: "Error",
+          message: "User not found"
+        }
+      };
+    }
+    const newAccessToken = jwt.sign(
+      { userId: user._id, email: user.email },
+      process.env.SECRET_KEY,
+      { expiresIn: "12h" }
+    );
+    return {
+      data: {
+        status: "OK",
+        message: "New access token created",
+        accessToken: newAccessToken
+      }
+    };
+  } catch (e) {
+    console.error(`status: Error, message: ${e}`);
+    return {
+      data: {
+        status: "Error",
+        message: e
+      }
+    };
+  }
+});
+
+const refresh_post$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: refresh_post
+});
+
+const signin_post = defineEventHandler(async (event) => {
+  try {
+    const { email, password } = await readBody(event);
+    const candidate = await UserModel.findOne({ email }).exec();
+    if (!candidate) {
+      return {
+        data: {
+          status: "Error",
+          message: "User not found"
+        }
+      };
+    }
+    const isPasswordValid = await bc.compare(password, candidate.password);
+    if (!isPasswordValid) {
+      return {
+        data: {
+          status: "Error",
+          message: "Invalid password"
+        }
+      };
+    }
+    const token = jwt.sign(
+      { userId: candidate._id, email: candidate.email },
+      // Payload
+      "your_secret_key",
+      { expiresIn: "12h" }
+    );
+    return {
+      data: {
+        status: "OK",
+        message: "User authenticated",
+        token
+        // Отправка токена пользователю
+      }
+    };
+  } catch (e) {
+    console.error(`status: Errormessage: ${e}`);
+    return {
+      data: {
+        status: "Error",
+        message: `${e}`
+      }
+    };
+  }
+});
+
+const signin_post$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: signin_post
+});
+
+const signup_post = defineEventHandler(async (event) => {
+  try {
+    const { username, password, email } = await readBody(event);
+    const candidate = await UserModel.findOne({ email }).exec();
+    if (candidate) {
+      return {
+        data: {
+          status: "Error",
+          message: "User already exists"
+        }
+      };
+    }
+    const hashedPassword = await bc.hash(password, 10);
+    const newUser = await new UserModel({
+      username,
+      password: hashedPassword,
+      email
+    }).save();
+    return {
+      data: {
+        status: "OK",
+        message: "User created",
+        newUser
+      }
+    };
+  } catch (e) {
+    console.error(`status: Errormessage: ${e}`);
+    return {
+      data: {
+        status: "Error",
+        message: `${e}`
+      }
+    };
+  }
+});
+
+const signup_post$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: signup_post
 });
 
 const Vue3 = version.startsWith("3");

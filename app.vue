@@ -1,6 +1,23 @@
+<script setup>
+import { useToastStore } from '~/store/toasts';
+
+const toast = useToastStore();
+
+function showDefaultToast() {
+  toast.message.value = 'This is a default toast notification';
+  toast.show.value = true;
+  toast.description.value = '12321312'
+  
+}
+</script>
+
 <template>
   <NuxtLayout>
     <NuxtPage />
+    <template v-if="toast.show.value === true">
+      <UNotification :timeout="toast.worktime.value" :id="1" :title="toast.message.value"
+        :description="toast.description.value" />
+    </template>
   </NuxtLayout>
 </template>
 <style>

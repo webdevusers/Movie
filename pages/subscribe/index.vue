@@ -38,7 +38,6 @@
             <p class="price text-[40px] font-semibold">$0<span class="text-[16px] text-grayscale6-500 ">/Month</span></p>
             <div class="lane w-[100%] h-[1px] bg-athensGray-100 my-[32px]"></div>
             <ul class="features font-semibold">
-<<<<<<< HEAD
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Streaming in high quality</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
@@ -47,19 +46,6 @@
                 Stream on multiple devices</li>
               <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Ad-free viewing experience</li>
-              <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
-=======
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Streaming in high quality</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                With the best audio quality</li>
-              <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Stream on multiple devices</li>
-              <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Ad-free viewing experience</li>
-              <li class="text-grayscale4-200 mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
->>>>>>> 5077df5f94f80f3909abd3e710fe165b13349243
-                Download to watch later</li>
             </ul>
 
             <UButton variant="ghost"
@@ -78,7 +64,6 @@
             </p>
             <div class="lane w-[100%] h-[1px] bg-athensGray-100 my-[32px]"></div>
             <ul class="features font-semibold">
-<<<<<<< HEAD
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
                 Streaming in high quality</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
@@ -87,19 +72,6 @@
                 Stream on multiple devices</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
                 Ad-free viewing experience</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/white-check.svg" alt="">
-=======
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Streaming in high quality</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                With the best audio quality</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Stream on multiple devices</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Ad-free viewing experience</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
->>>>>>> 5077df5f94f80f3909abd3e710fe165b13349243
-                Download to watch later</li>
             </ul>
 
             <UButton variant="ghost"
@@ -116,7 +88,6 @@
             </p>
             <div class="lane w-[100%] h-[1px] bg-athensGray-100 my-[32px]"></div>
             <ul class="features font-semibold">
-<<<<<<< HEAD
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Streaming in high quality</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
@@ -125,19 +96,6 @@
                 Stream on multiple devices</li>
               <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
                 Ad-free viewing experience</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/icons/check.svg" alt="">
-=======
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Streaming in high quality</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                With the best audio quality</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Stream on multiple devices</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
-                Ad-free viewing experience</li>
-              <li class="mb-[20px] flex"> <img class="mr-[12px]" src="/public/icons/check.svg" alt="">
->>>>>>> 5077df5f94f80f3909abd3e710fe165b13349243
-                Download to watch later</li>
             </ul>
 
             <UButton variant="ghost"

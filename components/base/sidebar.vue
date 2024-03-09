@@ -38,7 +38,7 @@ watchEffect(() => {
         <div v-if="selected === item.link" class="absolute h-[24px] w-[4px] bg-redOrange-500 left-[0]"></div>
         <NuxtImg :src="selected === item.link ? item.activeIcon : item.icon" class="mr-3 w-6 h-6" />
         <NuxtLink to="#" @click.prevent="change(item.link)"
-          :class="{ 'font-bold text-lg': true, 'text-gray-600': selected !== item.link }">
+          :class="{ 'font-medium text-lg': true, 'text-gray-600': selected !== item.link }">
           {{ item.name }}
         </NuxtLink>
       </div>
@@ -53,14 +53,14 @@ watchEffect(() => {
         <NuxtImg :src="selected === item.name ? item.activeIcon : item.icon" class="mr-3 w-6 h-6" />
         <template v-if="item.toggleComponent">
           <NuxtLink to="#" @click.prevent="change(item.name)"
-            :class="{ 'font-bold text-lg': true, 'text-gray-600': selected !== item.name }">
+            :class="{ 'font-medium text-lg mr-2': true, 'text-gray-600': selected !== item.name }">
             {{ item.name }}
           </NuxtLink>
           <UToggle v-model="darkMode"/>
         </template>
         <template v-else>
           <NuxtLink to="#" @click.prevent="change(item.name)"
-            :class="{ 'font-bold text-lg': true, 'text-gray-600': selected !== item.name }">
+            :class="{ 'font-medium text-lg': true, 'text-gray-600': selected !== item.name }">
             {{ item.name }}
           </NuxtLink>
         </template>

@@ -21,6 +21,10 @@ declare module 'nuxt/schema' {
    },
 
    mongo_db: string,
+
+   jsonsecret_key: string,
+
+   jsonrefresh_key: string,
   }
   interface PublicRuntimeConfig {
 
